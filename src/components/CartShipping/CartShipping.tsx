@@ -27,7 +27,7 @@ export const CartShipping: FC = () => {
               </span>
               <div>
                 <span className="bonus__img shipping__img">
-                  <img src="/test-basket-itstar/images/product_logo2.png" alt="product" />
+                  <img src="/images/product_logo2.png" alt="product" />
                 </span>
                 <span className="bonus__text">Reg.Mail (14-21 business days)</span>
               </div>
@@ -51,7 +51,7 @@ export const CartShipping: FC = () => {
               </span>
               <div>
                 <span className="bonus__img shipping__img">
-                  <img src="/test-basket-itstar/images/product_logo.png" alt="product" />
+                  <img src="/images/product_logo.png" alt="product" />
                 </span>
                 <span className="bonus__text">EMS (5-9 business days)</span>
               </div>
