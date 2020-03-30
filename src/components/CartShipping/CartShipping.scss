@@ -1,0 +1,65 @@
+@import "./public/styles/utils/vars";
+@import "./public/styles/utils/mixins";
+
+.shipping {
+  &__img {
+    width: 120px;
+    height: 15px;
+    display: block;
+
+    img {
+      height: 15px;
+      object-position: left center;
+    }
+  }
+
+  .bonus__text {
+    line-height: 1;
+  }
+
+  &__item + &__item {
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  .flex-container {
+    padding: 20px 0;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      padding: 20px 0 25px;
+    }
+  }
+  .col {
+    flex-basis: 50%;
+
+    @media (max-width: 768px) {
+      flex-basis: 100%;
+    }
+  }
+
+  .cart__text {
+    margin-left: 40px;
+    @include text;
+    font-size: 12px;
+    color: #777;
+    line-height: 20px;
+
+    @media (max-width: 768px) {
+      margin-left: 20px;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.cart__text--bold {
+  color: $dark;
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.cart__text--red {
+  color: $accent;
+}

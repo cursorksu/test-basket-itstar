@@ -1,0 +1,111 @@
+@import "./public/styles/utils/vars";
+@import "./public/styles/utils/mixins";
+
+.modal {
+  &__header {
+    background: $accent;
+    padding: 12px 20px 64px;
+  }
+
+  &__title {
+    @include text-deco;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  &__code,
+  &__text {
+    text-transform: uppercase;
+    @include title-style;
+    font-size: 13px;
+    line-height: 42px;
+  }
+  &__text {
+    padding: 20px 30px;
+    background: #eee;
+    margin-top: -46px;
+    line-height: 1.2;
+  }
+
+  &__code {
+    display: block;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+    padding-top: 22px;
+    padding-bottom: 9px;
+
+    &::after {
+      content: "";
+      background: $accent;
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      margin-left: 5px;
+      margin-bottom: 3px;
+      -webkit-animation: scale-up-center 0.6s
+        cubic-bezier(0.39, 0.57, 0.56, 1) both infinite;
+      animation: scale-up-center 0.6s
+        cubic-bezier(0.39, 0.57, 0.56, 1) both infinite;
+    }
+  }
+
+  &__btn.btn {
+    display: block;
+    background: $accent;
+    border-color: $accent;
+    color: $main-light;
+    width: calc(100% - 40px);
+    margin: auto;
+  }
+
+  &__body {
+    width: calc(100% - 40px);
+    margin: 0 auto 26px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(100, 100, 100, 0.5);
+  }
+
+  &__label {
+    padding: 0 20px 26px;
+    display: block;
+  }
+
+  &__input {
+    @include text-style;
+    color: $gray;
+    background: #fcfcfc;
+    border: 1px solid #bcbcbc;
+    border-radius: 2px;
+    display: block;
+    margin-bottom: 20px;
+    line-height: 44px;
+    width: 100%;
+    padding: 0 20px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

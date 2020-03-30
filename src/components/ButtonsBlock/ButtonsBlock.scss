@@ -1,0 +1,8 @@
+@import "./public/styles/utils/vars";
+@import "./public/styles/utils/mixins";
+
+.buttons {
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}

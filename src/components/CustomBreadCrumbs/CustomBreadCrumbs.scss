@@ -1,0 +1,20 @@
+@import "./public/styles/utils/vars";
+@import "./public/styles/utils/mixins";
+
+.main {
+  .MuiTypography-colorTextPrimary,
+  .MuiTypography-colorTextSecondary {
+    color: #9b9b9c;
+    font-size: 11px;
+    line-height: 1;
+  }
+
+  .MuiBreadcrumbs-root {
+    margin-bottom: 14px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+}

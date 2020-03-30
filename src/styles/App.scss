@@ -1,0 +1,88 @@
+@import "./public/styles/utils/vars";
+@import "./public/styles/utils/mixins";
+@import "./icomoon/style.css";
+@font-face {
+  font-family: "icomoon";
+  src: url("./icomoon/fonts/icomoon.eot");
+  src: url("./icomoon/fonts/icomoon.eot?iefix") format("eot"),
+    url("./icomoon/fonts/icomoon.woff") format("woff"),
+    url("./icomoon/fonts/icomoon.ttf") format("truetype"),
+    url("./icomoon/fonts/icomoon.svg#webfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LucidaGrande";
+  src: url("/fonts/LucidaGrande/LucidaGrande.eot") format("embedded-opentype");
+  src: url("/fonts/LucidaGrande/LucidaGrande.eot") format("eot"),
+    url("/fonts/LucidaGrande/LucidaGrande.woff") format("woff"),
+    url("/fonts/LucidaGrande/LucidaGrande.ttf") format("truetype"),
+    url("/fonts/LucidaGrande/LucidaGrande.svg#webfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.body {
+  @include text-style;
+  color: $dark;
+  font-size: 13px;
+  background: #efefef;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 42px auto;
+  @include flex(space-between, flex-start, nowrap);
+
+  @media (max-width: 768px) {
+    display: block;
+    max-width: 100%;
+    margin: 60px auto;
+  }
+}
+
+.main {
+  margin-left: 20px;
+  flex-basis: calc( 100% - 305px);
+
+  @media (max-width: 998px) {
+    max-width: 100%;
+    margin: 0 20px;
+    flex-basis: 100%;
+  }
+
+  @media (max-width: 600px) {
+    margin: 0;
+  }
+}
+
+.flex-container {
+  @include flex (space-between, flex-start, wrap);
+}
+
+.loader {
+  display: block;
+  text-align: center;
+  & img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.content {
+  @include flex(space-between, center, nowrap);
+}
+
+.text {
+  @include text;
+  color: $gray;
+  font-size: 12px;
+}
+
+.md-hidden {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}

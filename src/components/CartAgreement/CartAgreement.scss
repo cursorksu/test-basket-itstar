@@ -1,0 +1,112 @@
+@import "./public/styles/utils/vars";
+@import "./public/styles/utils/mixins";
+
+.cart {
+
+  &__sub-title {
+    font-size: 12px;
+    @include title-style;
+    @include flex(space-between, center, nowrap);
+    padding: 0 74px 0 20px;
+    line-height: 45px;
+    border-bottom: 1px solid #eee;
+    text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      line-height: 1;
+      font-size: 12px;
+      padding: 10px 38px 10px 20px;
+      letter-spacing: 1.2px;
+    }
+  }
+
+  &__radio,
+  &__checkbox {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0.1;
+  }
+}
+
+.label {
+  @include flex(flex-start, center, nowrap);
+  padding: 22px 0;
+
+  &__checkbox--square {
+    width: 31px;
+    height: 31px;
+    border: 1px solid #f3f3f3;
+    border-radius: 3px;
+    margin: 0 20px;
+    @include flex(center, center, nowrap);
+    flex-basis: 31px;
+    position: relative;
+    transition: border-color 0.3s ease-in-out;
+
+    @media (max-width: 768px) {
+      margin: 0 20px 0 20px;
+    }
+
+    &:hover {
+      border: 1px solid $accent;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: $light-gray;
+      width: 15px;
+      height: 15px;
+      border-radius: 2px;
+      z-index: 0;
+      transition: transform 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+    }
+
+    & svg {
+      position: relative;
+      z-index: 1;
+      width: 13px;
+      fill: #eee;
+    }
+  }
+
+  .text {
+    line-height: 32px;
+    color: $gray;
+  }
+}
+
+.cart__checkbox:checked + .label .label__checkbox--square {
+  &::before {
+    content: "";
+    background: $accent;
+    transform: scale(1.65) translate(calc(-50% + 3.2px), calc(-50% + 3px));
+  }
+
+  & svg {
+    fill: #fff;
+  }
+}
+
+.agreement__label {
+  flex-basis: calc(100% - 71px);
+  @media (max-width: 768px) {
+    flex-basis: calc(100% - 101px);
+    padding: 16px 0 20px;
+  }
+}
+
+.agreement__text {
+  flex-basis: calc(100% - 60px);
+
+  @media (max-width: 768px) {
+    line-height: 1.5;
+    display: inline-block;
+    padding-right: 40px;
+  }
+}

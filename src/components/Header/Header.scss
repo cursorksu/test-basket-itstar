@@ -1,0 +1,27 @@
+@import "./public/styles/utils/vars";
+@import "./public/styles/utils/mixins";
+
+.header {
+  background: $accent;
+  padding: 0 0 44px 20px;
+
+  &__title {
+    @include text-deco;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 56px;
+    color: $main-light;
+    padding-left: 44px;
+    background-image: url(/images/cart.png);
+    background-repeat: no-repeat;
+    background-position: left 8px center;
+    background-size: 24px;
+  }
+
+  &__subtitle {
+    color: $main-light;
+    text-transform: uppercase;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
