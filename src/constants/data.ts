@@ -281,7 +281,7 @@ export const MainNavItems: NavItem[] = [
 export const goods: Good[] = [
   {
     id: '1',
-    img: '/images/product-1.jpg',
+    img: '/test-basket-itstar/images/product-1.jpg',
     title: 'H&M Chino Shorts',
     price: 132.82,
     description: 'Maecenas ullamcorper, dui et placerat feugiat, '
@@ -291,7 +291,7 @@ export const goods: Good[] = [
   },
   {
     id: '2',
-    img: '/images/product-2.jpg',
+    img: '/test-basket-itstar/images/product-2.jpg',
     title: 'Bobbies Elegant Leather Driving Shoes',
     price: 132.82,
     description: 'Maecenas ullamcorper, dui et placerat feugiat, '

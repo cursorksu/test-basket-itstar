@@ -36,7 +36,7 @@ export const CartBonus: FC = () => {
             </svg>
           </span>
           <span className="bonus__img">
-            <img src="/images/product-3.jpg" alt="product" />
+            <img src="/test-basket-itstar/images/product-3.jpg" alt="product" />
           </span>
           <span className="bonus__text">ASOS Skinny Band Felt Floppy Hat</span>
         </label>
@@ -58,7 +58,7 @@ export const CartBonus: FC = () => {
             </svg>
           </span>
           <span className="bonus__img">
-            <img src="/images/product-4.jpg" alt="product" />
+            <img src="/test-basket-itstar/images/product-4.jpg" alt="product" />
           </span>
           <span className="bonus__text">H&M Polo Shirt</span>
         </label>
